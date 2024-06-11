@@ -1,0 +1,200 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.header-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.header-content p {
+    padding-top: 10px;
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    background: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+section {
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    max-width: 800px;
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+section:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+section h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #4a90e2;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    transition: width 0.5s ease; /* Transition for smooth width change */
+}
+
+section:hover h2::after {
+    width: 100px;
+}
+
+section p, section ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer form input[type="text"], footer form textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+footer form input[type="submit"] {
+    width: 83%;
+    max-width: 600px;
+    padding: 15px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+footer form input[type="submit"]:hover {
+    background-color: #9013fe;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media img.instagram-logo {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img.instagram-logo:hover {
+    transform: scale(1.1);
+}

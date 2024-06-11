@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Assignment</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        color: #333;
+        text-align: center;
+        padding: 20px;
+        background-color: #4caf50;
+        color: white;
+      }
+      h4 {
+        color: #444;
+        margin-left: 20px;
+      }
+      h5 {
+        color: #555;
+        margin-left: 40px;
+      }
+      p {
+        margin-left: 20px;
+      }
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      iframe {
+        display: block;
+        margin: 20px auto;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>HTML Assignment</h2>
+
+    <h4>1. HTML Lists</h4>
+
+    <h5>1.1 Ordered List - Best strikers in UFC</h5>
+    <ol>
+      <li>Alex Periera</li>
+      <li>Max Holloway</li>
+      <li>Alexander Volkanovski</li>
+    </ol>
+
+    <h5>1.2 Unordered List - Best groundgame in UFC</h5>
+    <ul>
+      <li>Islam Makhachev</li>
+      <li>Charles Oliviera</li>
+      <li>Khamzat Chimaev</li>
+    </ul>
+
+    <h5>1.3 Definition List</h5>
+    <dl>
+      <dt>UFC</dt>
+      <dd>stands for Ultimate Fighting Championship</dd>
+      <dt>LW</dt>
+      <dd>stands for Lightweight Division in UFC</dd>
+    </dl>
+
+    <br />
+
+    <h4>2. HTML Table Structure</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>LW</th>
+          <th>MW</th>
+          <th>LHW</th>
+          <th>HW</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Islam Makhachev</td>
+          <td>Du plesis</td>
+          <td>Alex Periera</td>
+          <td>Jon Jones</td>
+        </tr>
+        <tr>
+          <td>Arman Tsukaruyan</td>
+          <td>Sean Strickland</td>
+          <td>Jamahal Hill</td>
+          <td>Ciryl Gane</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Charles Oliviera</td>
+          <td>Paulo Costa</td>
+          <td>Magomed Ankalev</td>
+          <td>Stipe Miocic</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <br />
+
+    <h4>3. Rowspan and Colspan in HTML Tables</h4>
+
+    <h5>3.1 Rowspan Example</h5>
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>Subarna Bajracharya</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Favourite Sports</th>
+        <td>MMA</td>
+      </tr>
+      <tr>
+        <td>Boxing</td>
+      </tr>
+    </table>
+
+    <h5>3.2 Colspan Example</h5>
+    <table>
+      <tr>
+        <th colspan="3">Favourite Fighters</th>
+      </tr>
+      <tr>
+        <th>FW</th>
+        <th>LW</th>
+        <th>LHW</th>
+      </tr>
+      <tr>
+        <td>Max Holloway</td>
+        <td>Islam Makhachev</td>
+        <td>Alex Periera</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <h4>4. Embedding PDF files, Google Map, and YouTube Videos</h4>
+
+    <h5>4.1 Embedding a PDF File</h5>
+    <embed
+      src="https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf"
+      width="600"
+      height="500"
+      type="application/pdf"
+    />
+
+    <h5>4.2 Embedding a Google Map</h5>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1840174344835!2d85.32412151501755!3d27.70895568279139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1912daff7e69%3A0xb05489fb9efb8bb3!2sGabahal%2C%20Patan%2044600!5e0!3m2!1sen!2snp!4v1625642959341!5m2!1sen!2snp"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    >
+    </iframe>
+
+    <h5>4.3 Embedding a YouTube Video</h5>
+    <iframe
+      width="1263"
+      height="694"
+      src="https://www.youtube.com/embed/1vhrj62Hg8k"
+      title="Khabib vs McGregor The Fight Movie 2018 HD"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>

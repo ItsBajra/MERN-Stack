@@ -1,0 +1,60 @@
+#div-1, #div-2, para{
+    color: black;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#div-2 {
+    width: 500px;
+    background-color: cyan;
+}
+
+#div-1:hover{
+    background-color: cyan;
+}
+
+#div-2:hover{
+    background-color: white;
+
+}
+
+#div-1:active{
+    background-color: lime;
+}
+
+a:link{
+    color: #FF0000;
+}
+
+a:visited{
+    color: #00FF00;
+}
+
+a:hover{
+    color:#FF00FF;
+}
+
+p::first-letter{
+    text-transform: uppercase;
+}
+
+p::first-line {
+    font-size: 16px;
+}
+
+h1::before{
+    content: url('image.png')
+}
+
+h1::after{
+    content: "This is after content"
+}
+
+input[type="text"]{
+    color: cyan;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid green;
+    font-size: 16px;
+}

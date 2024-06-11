@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+        Decendent selector
+        .main-div h1{
+            background-color: orange;
+            color: white;
+        }
+
+        Child selector
+        .main-div > h1 {
+            background-color: orange;
+            color: white;
+        } */
+
+      /* Adjacent Sibling Selector
+        h1 + h2 {
+            background-color: orange;
+            color: white;
+        } */
+
+      /* General sibling selector */
+      /* h1 ~ h2 {
+            background-color: orange;
+            color: white;
+        }  */
+
+      .main-div {
+        width: auto;
+        color: white;
+        background-image: url("https://www.sportsnet.ca/wp-content/uploads/2016/11/nurmagomedov_khabib.jpg");
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <p>
+        
+      </p>
+      <h1>This is heading 1</h1>
+      <h2>This is heading 2</h2>
+      <div>
+        <h1>This is another heading</h1>
+        <h2>This is another heading 2</h2>
+      </div>
+    </div>
+  </body>
+</html>

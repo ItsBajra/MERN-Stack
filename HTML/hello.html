@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/hello.css">
+    <!-- <style>
+        table{
+            border: 1px solid red;
+            border-radius: 13px;
+        }
+    </style> -->
+
+  </head>
+  <body>
+    <h2>Home page</h2>
+    <a href="./index.html">Index page</a>
+
+    <ul style="list-style-type: square">
+      <li>Cricket</li>
+      <li>Football</li>
+      <li>Basketball</li>
+    </ul>
+
+    <ol start="5" type="A">
+      <li>Cricket</li>
+      <li>Football</li>
+      <li>BasketBall</li>
+    </ol>
+
+    <table>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Sandip</td>
+            <td>Magar</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Aditya</td>
+            <td>Poudel</td>
+            <td>21</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <form >
+        <label for="fname">First Name:</label><br />
+        <input type="text" id="fname" name="fname" /><br />
+        <label for="lname">Last Name:</label><br />
+        <input type="text" id="lname" name="lname" /><br />
+        <input type="submit" value="submit" />
+    </form>
+    <br>
+    <br>
+
+    <form enctype="multipart/form-data">
+        <input type="file" multiple/> <!-- multiple for choosing multiple files -->
+    </form>
+
+    <form>
+        <textarea rows="10" cols="30"></textarea>
+    </form>
+
+    <br><br>
+
+    <form>
+        <select>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select>
+    </form>
+
+    <br><br>
+
+    <form>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label> <br />
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label>
+    </form>
+
+    <br><br>
+
+    <form>
+        <input type="checkbox" id="vehicle1"   name="vehicle1" value="Bike" />
+        <label for="vehicle1">I have a bike</label><br />
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="charset" />
+        <label for="vehicle2">I have a car</label><br />
+    </form>
+    
+  </body>
+</html>
