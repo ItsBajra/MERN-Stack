@@ -1,0 +1,295 @@
+:root {
+    --primary-color: #669ccb;
+    --primary-color-dark: #5681a7;
+    --secondary-color: #e8f1fa;
+    --text-dark: #282d31;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background: #f5f5f5 url("assets/hello.jpg") center center/cover no-repeat;
+    margin-top: 60px;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    padding-top: 100px;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo a {
+    text-decoration: none;
+    color: var(--extra-light);
+    font-size: 1.5rem;
+}
+
+.nav__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__links li a {
+    text-decoration: none;
+    color: var(--extra-light);
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav__links li a:hover {
+    color: var(--primary-color);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 25px;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background-color: var(--extra-light);
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    transition: all 0.3s;
+}
+
+.nav-toggle-label span::before {
+    top: -10px;
+}
+
+.nav-toggle-label span::after {
+    top: 10px;
+}
+
+.nav-toggle:checked + .nav-toggle-label span {
+    background: transparent;
+}
+
+.nav-toggle:checked + .nav-toggle-label span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.nav-toggle:checked + .nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.nav-toggle:checked ~ .nav__links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 1rem;
+}
+
+.nav__links li {
+    margin: 1rem 0;
+}
+
+@media (max-width: 850px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .AccountSettings {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .card-body.media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media-body {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .row.no-gutters.row-bordered {
+        flex-direction: column;
+    }
+
+    .col-md-3, .col-md-9 {
+        width: 100%;
+    }
+
+    .text-right {
+        text-align: center;
+    }
+
+    .text-right button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+.ui-w-80 {
+    width: 80px !important;
+    height: auto;
+}
+
+.btn-default {
+    border-color: #a7c7e0;
+    background: transparent;
+    color: #a7c7e0;
+}
+
+.btn-default:hover {
+    background: #a7c7e0;
+    color: black;
+}
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    border-color: #a7c7e0;
+    background: transparent;
+    color: #a7c7e0;
+}
+
+.btn-primary:hover {
+    background: #a7c7e0;
+    color: black;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+.card {
+    background-clip: padding-box;
+    box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+    background: linear-gradient(to right, rgba(62, 62, 70, 0.4), rgba(224, 192, 167, 0.2));
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.form-group {
+    color: #bfc3c7;
+}
+
+.account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+    width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+    color: #4E5155 !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #bfc3c7 !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+    background: transparent;
+    color: #bfc3c7 !important;
+}
