@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-transform: capitalize;
   }
   
   /* Nav Bar */
@@ -53,7 +54,7 @@
   .login {
     border-width: 1px;
     border-style: solid;
-    border-radius: 12px;
+    border-radius: 20px;
     padding: 7px 15px;
     color: white;
     background-color: #f8541e;
