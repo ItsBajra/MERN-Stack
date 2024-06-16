@@ -6,7 +6,7 @@ function addBook() {
         let li = document.createElement('li');
         li.textContent = bookTitle;
         li.onclick = toggleFavorite; 
-        ul.appendChild(li);
+        ul.insertBefore(li, ul.firstChild);
     }
 }
 
@@ -29,10 +29,24 @@ function searchBook() {
 
 // Question 3
 function removeBook() {
-    let ul = document.getElementById('book-list');
-    if (ul.lastElementChild) {
-        if (confirm("Are you sure you want to remove the last book?")) {
-            ul.removeChild(ul.lastElementChild);
+    let bookTitle = prompt("Enter the book title to remove:");
+    if (bookTitle) {
+        let ul = document.getElementById('book-list');
+        let items = ul.getElementsByTagName('li');
+        let found = false;
+
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].textContent.toLowerCase() === bookTitle.toLowerCase()) {
+                if (confirm(`Are you sure you want to remove "${items[i].textContent}"?`)) {
+                    ul.removeChild(items[i]);
+                }
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            alert("Book not found in the list.");
         }
     }
 }

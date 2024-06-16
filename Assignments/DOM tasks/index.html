@@ -4,18 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Modern Book List</title>
   </head>
   <body>
-    <div class="main-container">
-      <input type="text" id="search-bar" placeholder="Search for a book" />
-      <ul id="book-list">
-
+    <nav class="navbar">
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fa fas fa-bars"></i>
+      </label>
+      <div class="menu-container">
+        <a href="#" class="logo">
+          <img src="assets/logo.png" alt="logo" />
+        </a>
+      </div>
+      <ul class="nav-right">
+        <li><a href="" class="Items">Home</a></li>
+        <li><a href="" class="Items">About us</a></li>
+        <li><a href="" class="Items">Courses</a></li>
+        <li><a href="" class="Items">Contact us</a></li>
+        <li><a href="" class="login">login</a></li>
       </ul>
-      <button onclick="addBook()">Add Book</button>
-      <button onclick="searchBook()">Search Book</button>
-      <button onclick="removeBook()">Remove Book</button>
-      <button onclick="clearSearchHighlights()">Clear Highlights</button>
+    </nav>
+
+    <div class="container">
+      <div class="left-container">
+        <ul id="book-list">
+          <li onclick="toggleFavorite(event)">To Kill a Mockingbird</li>
+          <li onclick="toggleFavorite(event)">1984</li>
+          <li onclick="toggleFavorite(event)">The Great Gatsby</li>
+          <li onclick="toggleFavorite(event)">Pride and Prejudice</li>
+          <li onclick="toggleFavorite(event)">Moby-Dick</li>
+          <li onclick="toggleFavorite(event)">The Catcher in the Rye</li>
+          <li onclick="toggleFavorite(event)">War and Peace</li>
+          <li onclick="toggleFavorite(event)">The Lord of the Rings</li>
+          <li onclick="toggleFavorite(event)">Jane Eyre</li>
+        </ul>
+      </div>
+
+      <div class="main-container">
+        <input type="text" id="search-bar" placeholder="Search for a book" />
+        <button onclick="addBook()">Add Book</button>
+        <button onclick="searchBook()">Search Book</button>
+        <button onclick="removeBook()">Remove Book</button>
+        <button onclick="clearSearchHighlights()">Clear Highlights</button>
+      </div>
+    </div>
+
+    <div class="additional-container">
     </div>
 
     <script src="script.js"></script>
