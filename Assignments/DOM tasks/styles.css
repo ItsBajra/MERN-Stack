@@ -26,16 +26,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 400px; /* Adjust as needed */
+    max-height: 400px; 
     overflow-y: auto;
-    width: 45%; /* Adjust as needed */
+    width: 45%; 
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%; /* Adjust as needed */
+    width: 45%;
 }
 
 #search-bar {
